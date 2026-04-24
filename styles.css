@@ -1,0 +1,254 @@
+/* VARIABLES */
+:root {
+    --color-primary: #4da6ff;
+    --color-dark: #2c3e50;
+    --color-accent: #1e3a8a;
+    --color-light: #f0f7ff;
+    --radius: 12px;
+    --shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: #333;
+    font-size: 1.1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* SECCIONES */
+section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-accent);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--color-primary);
+    padding-bottom: 0.8rem;
+    display: inline-block;
+}
+
+/* Tarjetas */
+.proyectos-grid,
+.mascotas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto,
+.mascota {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.proyecto:hover,
+.mascota:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.proyecto h3,
+.mascota h3 {
+    color: var(--color-accent);
+    padding: 1.2rem 1rem 0.5rem;
+}
+
+.proyecto p,
+.mascota p {
+    padding: 0 1.2rem 1.2rem;
+    color: #555;
+}
+
+/* Botones */
+.btn-proyecto,
+.btn-interactivo,
+button[type="submit"],
+.btn-back {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-proyecto:hover,
+.btn-interactivo:hover,
+button[type="submit"]:hover,
+.btn-back:hover {
+    background: #1e88e5;
+    transform: scale(1.05);
+}
+
+/* CONTACTO */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 140px;
+}
+
+form button {
+    grid-column: span 2;
+    justify-self: start;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.redes-sociales a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.redes-sociales a:hover {
+    color: var(--color-primary);
+}
+
+/* FOOTER */
+footer {
+    background: var(--color-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* MEDIA */
+@media (max-width: 576px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .menu-btn {
+        display: flex;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+    
+    .proyectos-grid,
+    .mascotas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    form {
+        grid-template-columns: 1fr;
+    }
+    
+    form textarea {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .proyectos-grid,
+    .mascotas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

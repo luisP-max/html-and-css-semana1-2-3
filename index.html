@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Angel Piña Meriño | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/desarrollador.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Luis Angel Piña Meriño</h1>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="mascotas.html">Mis Mascotas</a></li>
+                </ul>
+            </nav>
+            <button id="menu-btn" class="menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p id="sobre-mi-texto">
+            Soy un desarrollador de software con grandes ideas y metas por alcanzar. 
+            Me apasiona crear páginas web atractivas y funcionales. Me encanta trabajar en equipo.
+        </p>
+        <button id="btn-cambiar-texto" class="btn-interactivo">Cambiar descripción</button>
+    </section>
+
+    <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+        <div class="proyectos-grid">
+            <article class="proyecto">
+                <h3>Portafolio Personal</h3>
+                <p>Diseño y maquetación con HTML5 y CSS3</p>
+                <a href="#" class="btn-proyecto">Ver proyecto</a>
+            </article>
+            <article class="proyecto">
+                <h3>Página de Mascotas</h3>
+                <p>Galería responsive con animaciones</p>
+                <a href="mascotas.html" class="btn-proyecto">Ver proyecto</a>
+            </article>
+            <article class="proyecto">
+                <h3>Landing Page Moderna</h3>
+                <p>Diseño atractivo y responsive</p>
+                <a href="#" class="btn-proyecto">Ver proyecto</a>
+            </article>
+            <article class="proyecto">
+                <h3>Formulario de Registro</h3>
+                <p>Validación básica con HTML y CSS</p>
+                <a href="#" class="btn-proyecto">Ver proyecto</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        
+        <div class="redes-sociales">
+            <a href="mailto:pinamerinoluis@gmail.com">📧 Email: pinamerinoluis@gmail.com</a>
+            <a href="https://github.com/luisP-max" target="_blank">🐙 GitHub: luisP-max</a>
+            <a href="https://www.instagram.com/luispina2003/" target="_blank">📷 Instagram: @luispina2003</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luis Angel Piña Meriño</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
